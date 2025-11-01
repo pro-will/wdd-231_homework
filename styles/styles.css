@@ -10,7 +10,7 @@ header {
     padding: 5px 0 5px 10px;
     column-gap: 8px;
     align-items: end;
-    border-bottom: solid 1px  #ddd;
+   
 }
 
 header img {
@@ -49,6 +49,8 @@ header span {
 /* Navigation menu */
 .navigation {
     display: none;
+    background-color: rgb(23, 21, 21);
+    color: white;
 }
 
 .navigation.show {
@@ -59,4 +61,22 @@ header span {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    text-decoration: none;
+    background-color: rgb(56, 48, 48);
+    color: #ffffff;
+    
+}
+
+.navigation a:hover {
+    border: solid 1px #eee;
+}
+
+.active {
+    background-color: #111010;
+    color: #fff;
 }

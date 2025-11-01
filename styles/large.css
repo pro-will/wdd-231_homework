@@ -12,8 +12,12 @@
 }
  .navigation {
     display: block;
+    background-color: rgb(38, 35, 35);
  }
  .navigation ul {
     display: flex;
+ }
+ .navigation li a.active {
+    background-color: #eee;
  }
 }
