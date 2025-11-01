@@ -17,7 +17,7 @@
 </head>
 <body>
    <header>
-      <img src="images/house-door.svg" alt="logo house door" id="house-logo" width="512" height="512">
+      <img src="images/house-door.svg" alt="logo house door" width="512" height="512">
       <span id="course-title">Chamber of Commerce</span>
       <button id="hum-btn" class="humberger"></button>
       <nav id="nav-bar" class="navigation">
@@ -29,34 +29,41 @@
          </ul>
       </nav>
    </header> 
-   <div class="grid-container">
-      <div class="grid-child">
-        <main>
-            <section class="card">
-               <h1>Home</h1>
-                <h2>About Me</h2>
-               <p class="profile">I am William Pelo Kibwila from Kinshasa, Congo democratic republic of, I am a student at BYU-Idaho studying Web Development.
-                  I enjoy creating interactive and dynamic websites and applications, this is way I am taking this course. These skills will help me in my future career.
-                  In my free time, I enjoy reading books about business and technology, as well as exploring new places and cultures.
-                  I am also passionate about learning new programming languages and frameworks to enhance my skills set.</p> 
-            </section>
-            <section class="card-1">
-               <h2>Student Photo</h2>
-               <img src="images/WilliamPelo.jpeg" alt="William Pelo Kibwila" width="200">
-               <p>This is a photo of me, William Pelo Kibwila, a student at BYU-Idaho.</p>
-            </section>
-            
-            <section>
-                <label for="course-name" class="label-product-name">Web Certificate Course:</label>
-                <select name="course-name" id="course-name" required>
-                <option value="" disabled selected>Select a Course...</option>
-                <!-- Options will be populated by JavaScript -->
-                </select>
-                <div id="course-cards"></div>
-                <p>Total Credits Displayed: <span id="total-credits">0</span></p>
-            </section>
-        </main>
-      </div>
+   <main>
+      <h1>Home</h1>
+      <div class="student">
+         <section class="about-student">
+            <h2>About Me</h2>
+            <p class="profile">I am William Pelo Kibwila from Kinshasa, Congo democratic republic of, I am a student at BYU-Idaho studying Web Development.
+            I enjoy creating interactive and dynamic websites and applications, this is way I am taking this course. These skills will help me in my future career.
+            In my free time, I enjoy reading books about business and technology, as well as exploring new places and cultures.
+            I am also passionate about learning new programming languages and frameworks to enhance my skills set.</p> 
+         </section>
+
+         <section class="about-student">
+            <h2>Student Photo</h2>
+            <img src="images/WilliamPelo.jpeg" alt="William Pelo Kibwila" width="200">
+            <p>This is a photo of me, William Pelo Kibwila, a student at BYU-Idaho.</p>
+         </section>
+       </div>     
+      <section>
+         <h1>Course Filter</h1>
+         <div class="filters">
+            <select id="subjectFilter">
+               <option value="">All Subjects</option>
+               <option value="CSE">CSE</option>
+               <option value="WDD">WDD</option>
+            </select>
+            <select id="statusFilter">
+               <option value="">All Status</option>
+               <option value="true">Completed</option>
+               <option value="in progress">In Progress</option>
+            </select>
+            <button id="resetBtn">Reset</button>
+         </div>
+         <div class="course-list" id="courseList"></div>
+      </section>
+   </main>
      
    <footer>
       <p><span id="copyright"></span>© 2025 🌳 William Pelo Kibwila 🌳 Kinshasa DR Congo</p>

@@ -12,12 +12,12 @@
 }
  .navigation {
     display: block;
-    background-color: rgb(38, 35, 35);
+    border-bottom: solid 1px #a4a2a2;
  }
  .navigation ul {
     display: flex;
  }
- .navigation li a.active {
-    background-color: #eee;
+ .navigation a {
+    border: none;
  }
 }

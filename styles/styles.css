@@ -8,8 +8,9 @@ header {
     display: grid;
     grid-template-columns: 24px auto 44px;
     padding: 5px 0 5px 10px;
-    column-gap: 8px;
     align-items: end;
+    column-gap: 8px;
+    border-bottom: solid 1px #a4a2a2;
    
 }
 
@@ -18,7 +19,6 @@ header img {
     width: 100%;
     height: auto;
     padding-bottom: 5px;
-    color: rgb(11, 11, 96);
 }
 
 header span {
@@ -49,7 +49,7 @@ header span {
 /* Navigation menu */
 .navigation {
     display: none;
-    background-color: rgb(23, 21, 21);
+    background-color: rgb(53, 43, 43);
     color: white;
 }
 
@@ -67,8 +67,8 @@ header span {
     display: block;
     padding: .8rem 10px;
     text-decoration: none;
-    background-color: rgb(56, 48, 48);
     color: #ffffff;
+    border-bottom: solid 1px #6e6e6e;
     
 }
 
@@ -77,6 +77,116 @@ header span {
 }
 
 .active {
-    background-color: #111010;
+    background-color: #6e6e6e;
     color: #fff;
+}
+
+
+/* main page */
+h1 {
+    margin-top: 5px;
+    font-size: 1.3rem;
+}
+
+h2 {
+    font-size: 1rem;
+    text-align: center;
+    border-bottom: solid 1px #d6d1d1;
+    margin: 0px 0px 8px 0px;
+    background-color:  rgb(53, 43, 43);
+    color: #ffffff; 
+    padding: 8px;
+    
+}
+
+.student {
+    display: grid;
+    grid-template-columns: 550px 340px;
+    column-gap: 15px;
+    background-color: #fff;
+    margin-top: 12px;
+    
+}
+
+.about-student {
+    margin: 0 0 15px;
+    border: 2px solid  rgb(220, 216, 216);
+    border-radius: 12px;
+    background-color: #f9f9f9;
+}
+
+.about-student img {
+    text-align: center;
+    margin-left: 68px;
+    margin-top: 18px;
+    width: 180px;
+    height: 190px;
+    border: 1px solid gray;
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
+}
+
+.about-student p {
+    padding: 5px 15px;
+}
+
+/* display course for this certificate */
+h1 {
+   text-align: center;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+select, button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.course {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.course:hover {
+    transform: scale(1.02);
+}
+
+.CSE {
+    background-color: #e6f0ff; /* Light blue */
+    border-left: 5px solid #0073e6;
+}
+
+.WDD {
+    background-color: #fff6e6; /* Light orange */
+    border-left: 5px solid #ff9800;
+}
+
+.course h2 {
+    margin: 0 0 0.5rem;
+    color: #f8fafb;
+}
+
+.course p {
+    font-size: 0.9rem;
+}
+
+.tech-list {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #555;
 }
