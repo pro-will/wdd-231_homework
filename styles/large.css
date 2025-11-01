@@ -20,4 +20,8 @@
  .navigation a {
     border: none;
  }
+ .student {
+   display: grid;
+   grid-template-columns: 550px 340px;
+ }
 }

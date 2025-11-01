@@ -99,6 +99,14 @@ h2 {
     
 }
 
+h3 {
+    text-align: center;
+    border: solid 1px #d6d1d1;
+    background-color: #202121;
+    color: #ffffff;
+    padding: 8px;
+}
+
 .student {
     display: grid;
     grid-template-columns: 550px 340px;
@@ -130,10 +138,23 @@ h2 {
     padding: 5px 15px;
 }
 
-/* display course for this certificate */
-h1 {
-   text-align: center;
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+  .student {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-student img {
+    max-width: 200px;
+  }
+
+  .home-section {
+    padding: 1rem;
+  }
 }
+
+/* display course for this certificate */
 
 .filters {
     display: flex;
@@ -189,4 +210,28 @@ select, button {
     margin-top: 0.5rem;
     font-size: 0.85rem;
     color: #555;
+}
+
+footer {
+    margin-top: 15px;
+    background-color: #c08218;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px 0px;
+    line-height: 1.5;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+.social-media a img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s;
+}
+.social-media a img:hover {
+    transform: scale(1.2);
 }
