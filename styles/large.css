@@ -2,6 +2,7 @@
     header, main, nav, footer {
         max-width: 900px;
         margin: 0 auto;
+        border-bottom: none;
     }
 
     header {
