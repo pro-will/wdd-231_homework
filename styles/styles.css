@@ -1,0 +1,62 @@
+* {
+    font-family: "Roboto" Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Style header of the page */
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    column-gap: 8px;
+    align-items: end;
+    border-bottom: solid 1px  #ddd;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5px;
+    color: rgb(11, 11, 96);
+}
+
+header span {
+    font-size: 1.3rem;
+    color: rgb(11, 11, 96);
+}
+
+/* Navigation humburger button */
+.humberger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(11, 11, 96);
+}
+
+.humberger::after {
+    content: "\2630";
+    font-size: 1.5rem;
+    
+}
+
+.humberger.show::after {
+    content: "\00D7";
+    font-size: 2rem;
+    
+}
+
+/* Navigation menu */
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

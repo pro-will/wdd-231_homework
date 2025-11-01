@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - WDD 231 Home Page</title>
+    <meta name="description" content="Home page for Your Name's WDD 231 repository, containing links and course assignments.">
+    <meta name="author" content="Your Name">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Your+Chosen+Font&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    
+    <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+             <span>Chamber of Commerce</span>
+        </div>
+        <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button> 
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#" target="_blank">Chamber Projects</a></li> 
+            <li><a href="#" target="_blank">Final Project</a></li> 
+          </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+        
+        <section>
+            <h2>WDD 231 Information</h2>
+            <p>Content for WDD 231 Information...</p>
+        </section>
+
+        <section>
+            <h2>About Me</h2>
+            <p>Content about yourself...</p>
+        </section>
+
+        <section id="course-cards-container">
+            <h2>Web and Computer Programming Certificate Courses</h2>
+            <div id="course-filters">
+                <button data-filter="All">All Courses</button>
+                <button data-filter="WDD">WDD Courses</button>
+                <button data-filter="CSE">CSE Courses</button>
+            </div>
+            <div id="course-cards">
+                </div>
+            <p>Total Credits Displayed: <span id="total-credits">0</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank"></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"></a>
+            </div>
+
+        <p>
+            &copy; <span id="currentyear"></span> William Pelo Kibwila | Kinshasa, Democratic Republic of the Congo
+        </p>
+
+        <p>
+            Last Modified: <span id="lastModified"></span>
+        </p>
+    </footer>
+</body>
+</html>

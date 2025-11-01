@@ -1,0 +1,25 @@
+/* larger.css */
+
+/* Media Query for larger screens */
+@media screen and (min-width: 768px) {
+    
+    /* 1. Horizontal Navigation (CSS Flex) */
+    nav ul {
+        display: flex; /* Activate flexbox for horizontal layout */
+        justify-content: space-around; /* Distribute space between links */
+    }
+
+    /* 2. Main Layout (Not a simple one column) */
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Example: Two columns for sections */
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* 3. Hide Hamburger on large screens */
+    #menu-toggle {
+        display: none; 
+    }
+}
