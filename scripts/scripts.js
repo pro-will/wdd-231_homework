@@ -1,68 +1,56 @@
 document.getElementById("lastModified").innerHTML = document.lastModified;
 
-const courses = [
-{ id: 'course-name', name: 'Introduction to Programming', subject: 'CSE', number: 110, credits: 2, certificate: 'Web and Computer Programming', description: 'This course will introduce students to programming...', technology: ['Python'], completed: true },
-{ id: 'course-name', name: 'Web Fundamentals', subject: 'WDD', number: 130, credits: 2, certificate: 'Web and Computer Programming', description: 'This course introduces students to the World Wide Web...', technology: ['HTML', 'CSS'], completed: true },
-{ id: 'course-name', name: 'Programming with Functions', subject: 'CSE', number: 111, credits: 2, certificate: 'Web and Computer Programming', description: 'Students become more efficient programmers...', technology: ['Python'], completed: true },
-{ id: 'course-name', name: 'Programming with Classes', subject: 'CSE', number: 210, credits: 2, certificate: 'Web and Computer Programming', description: 'This course will introduce the notion of classes...', technology: ['C#'], completed: 'in progress' },
-{ id: 'course-name', name: 'Dynamic Web Fundamentals', subject: 'WDD', number: 131, credits: 2, certificate: 'Web and Computer Programming', description: 'Students learn to create dynamic websites...', technology: ['HTML', 'CSS', 'JavaScript'], completed: true },
-{ id: 'course-name', name: 'Frontend Web Development I', subject: 'WDD', number: 231, credits: 2, certificate: 'Web and Computer Programming', description: 'Students focus on user experience, accessibility...', technology: ['HTML', 'CSS', 'JavaScript'], completed: 'in progress' }
-];
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const memberSpotlight = document.getElementById('member-spotlight');
 
+    // --- 1. Mobile Menu Toggle ---
+    menuToggle.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+        mobileNav.style.display = isExpanded ? 'none' : 'block';
+        this.setAttribute('aria-expanded', !isExpanded);
+    });
 
-const courseList = document.getElementById('courseList');
-const subjectFilter = document.getElementById('subjectFilter');
-const statusFilter = document.getElementById('statusFilter');
-const resetBtn = document.getElementById('resetBtn');
+    // --- 2. Fetch and Display Featured Members ---
+    async function getFeaturedMembers() {
+        if (!memberSpotlight) return; // Only run on pages with this section
 
+        try {
+            // Fetch data from the local JSON file
+            const response = await fetch('members.json'); 
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const members = await response.json();
 
-function renderCourses(filteredCourses) {
-courseList.innerHTML = '';
-if (filteredCourses.length === 0) {
-courseList.innerHTML = '<p style="text-align:center; color:#666;">No courses found for selected filters.</p>';
-return;
-}
-filteredCourses.forEach(course => {
-const div = document.createElement('div');
-div.className = `course ${course.subject}`;
-div.innerHTML = `
-<h2>${course.name}</h2>
-<p><strong>Subject:</strong> ${course.subject}</p>
-<p><strong>Status:</strong> ${course.completed}</p>
-<p>${course.description}</p>
-<p class="tech-list"><strong>Tech:</strong> ${course.technology.join(', ')}</p>
-`;
-courseList.appendChild(div);
+            // Clear the "Loading" message
+            memberSpotlight.innerHTML = ''; 
+
+            // Display all 7 members (or as many as available)
+            members.slice(0, 7).forEach(member => {
+                const card = document.createElement('div');
+                card.classList.add('member-card');
+                card.setAttribute('role', 'article');
+                
+                // Add class based on membership level for potential styling
+                card.classList.add(`level-${member.membership_level.toLowerCase()}`); 
+
+                card.innerHTML = `
+                    <h3 class="member-name"><a href="${member.website_url}" target="_blank">${member.name}</a></h3>
+                    <span class="level-badge">${member.membership_level} Member</span>
+                    <p class="member-description">${member.description}</p>
+                    <p class="member-sector">Sector: ${member.activity_sector}</p>
+                    <a href="tel:${member.phone}" class="member-contact-btn">Call ${member.phone}</a>
+                `;
+                memberSpotlight.appendChild(card);
+            });
+
+        } catch (error) {
+            console.error('Could not fetch members:', error);
+            memberSpotlight.innerHTML = '<p class="error-message">Could not load member listings. Please check the members.json file path.</p>';
+        }
+    }
+
+    getFeaturedMembers();
 });
-}
-
-
-function filterCourses() {
-const subjectValue = subjectFilter.value;
-const statusValue = statusFilter.value;
-let filtered = courses;
-
-
-if (subjectValue) {
-filtered = filtered.filter(c => c.subject === subjectValue);
-}
-if (statusValue) {
-filtered = filtered.filter(c => c.completed == statusValue);
-}
-renderCourses(filtered);
-}
-
-
-subjectFilter.addEventListener('change', filterCourses);
-statusFilter.addEventListener('change', filterCourses);
-
-
-resetBtn.addEventListener('click', () => {
-subjectFilter.value = '';
-statusFilter.value = '';
-renderCourses(courses);
-});
-
-
-// Display all courses by default
-renderCourses(courses);

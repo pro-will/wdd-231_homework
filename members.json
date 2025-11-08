@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Sahara Soles Footwear",
+        "address": "450 Dune Street, Kinshasa, 12345",
+        "phone": "+243 856 985 4102",
+        "website_url": "https://www.saharasoles.com",
+        "membership_level": "Executive",
+        "activity_sector": "Retail/Apparel",
+        "description": "The city's destination for quality, ethically sourced footwear and accessories."
+    },
+    {
+        "id": 2,
+        "name": "SWEC Consulting Group",
+        "address": "100 Commerce Tower, Suite 700, Kinshasa, 12345",
+        "phone": "+243 816 985 4115",
+        "website_url": "https://www.swecconsulting.com",
+        "membership_level": "Partnership",
+        "activity_sector": "Professional Services/Finance",
+        "description": "Providing strategic financial planning and growth solutions for regional businesses."
+    },
+    {
+        "id": 3,
+        "name": "The Sandstone Cafe",
+        "address": "12 Oasis Lane, Kinshasa, Barumbu, 12345",
+        "phone": "+243 895 010 3524",
+        "website_url": "https://www.sandstonecafe.com",
+        "membership_level": "Community",
+        "activity_sector": "Food & Beverage/Hospitality",
+        "description": "Kinshasa's favorite spot for fresh pastries, locally roasted coffee, and community gatherings."
+    },
+    {
+        "id": 4,
+        "name": "Nomad Tech Solutions",
+        "address": "220 Innovation Drive, Kinshasa, 12345",
+        "phone": "+243 856 987 4188",
+        "website_url": "https://www.nomadtech.io",
+        "membership_level": "Partnership",
+        "activity_sector": "Information Technology/Software",
+        "description": "Leading providers of custom business software and cloud infrastructure services."
+    },
+    {
+        "id": 5,
+        "name": "Akilah's Fine Arts",
+        "address": "33 Kwenge District Ave, Kinshasa, 12345",
+        "phone": "+243 836 925 4197",
+        "website_url": "https://www.akilahsfinearts.com",
+        "membership_level": "Executive",
+        "activity_sector": "Arts & Culture",
+        "description": "An independent gallery showcasing emerging artists from the Kinshasa Gombe."
+    },
+    {
+        "id": 6,
+        "name": "Atlas Logistics Inc.",
+        "address": "90 Port Road, Kinshasa, 12345",
+        "phone": "+243 906 987 4241",
+        "website_url": "https://www.atlaslogistics.com",
+        "membership_level": "Partnership",
+        "activity_sector": "Transportation/Logistics",
+        "description": "Reliable freight and supply chain management across West Kinshasa DRC."
+    },
+    {
+        "id": 7,
+        "name": "Desert Bloom Florist",
+        "address": "77 Market Square, Kinshasa, 12345",
+        "phone": "+243 986 085 4184",
+        "website_url": "https://www.desertbloom.com",
+        "membership_level": "Community",
+        "activity_sector": "Retail/Gifts",
+        "description": "Fresh floral arrangements and unique gift baskets for every occasion."
+    }
+]

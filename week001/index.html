@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Pelo Kibwila</title>
+    <meta name="author" content="William Pelo Kibwila">
+    <meta name="description" content="I am studying web development at BYU-Idaho and I am a web developer with a passion for creating dynamic and user-friendly websites.">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+   <header>
+      <img src="images/house-door.svg" alt="logo house door" width="512" height="512">
+      <span id="course-title">Chamber of Commerce</span>
+      <button id="hum-btn" class="humberger"></button>
+      <nav id="nav-bar" class="navigation">
+         <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">ChamberProjects</a></li>
+            <li><a href="#">FinalProject</a></li>
+            <li><a href="#contact">Contact</a></li>
+         </ul>
+      </nav>
+   </header> 
+   <main>
+      <h1 style="margin-left: 0px;">Home</h1>
+      <div class="student">
+         <section class="about-student">
+            <h2>About Me</h2>
+            <p class="profile">I am William Pelo Kibwila from Kinshasa, Congo democratic republic of, I am a student at BYU-Idaho studying Web Development.
+            I enjoy creating interactive and dynamic websites and applications, this is way I am taking this course. These skills will help me in my future career.
+            In my free time, I enjoy reading books about business and technology, as well as exploring new places and cultures.
+            I am also passionate about learning new programming languages and frameworks to enhance my skills set.</p> 
+         </section>
+
+         <section class="about-student">
+            <h2>Student Photo</h2>
+            <img src="images/WilliamPelo.jpeg" alt="William Pelo Kibwila" width="200">
+            <p>This is a photo of me, William Pelo Kibwila, a student at BYU-Idaho.</p>
+         </section>
+       </div>     
+      <section>
+         <h3>Web and Computer Certificate Courses</h3>
+         <div class="filters">
+            <select id="subjectFilter">
+               <option value="">All Subjects</option>
+               <option value="CSE">CSE</option>
+               <option value="WDD">WDD</option>
+            </select>
+            <select id="statusFilter">
+               <option value="">All Status</option>
+               <option value="true">Completed</option>
+               <option value="in progress">In Progress</option>
+            </select>
+            <button id="resetBtn">Reset</button>
+         </div>
+         <div class="course-list" id="courseList"></div>
+      </section>
+   </main>
+     
+   <footer>
+      <div class="social-media">
+         <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.svg" alt="Facebook"></a>
+         <a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+         <a href="https://www.youtube.com" target="_blank"><img src="images/youtube.svg" alt="YouTube"></a>
+         <a href="https://www.twitter.com" target="_blank"><img src="images/messenger.svg" alt="Messenger"></a>
+
+      </div>
+      <p><span id="copyright"></span>© 2025 🌳 William Pelo Kibwila 🌳 Kinshasa DR Congo</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+   </footer>
+</body>
+</html>
